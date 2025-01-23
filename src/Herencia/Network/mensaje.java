@@ -21,7 +21,7 @@ public class mensaje extends publicacion {
 
     @Override
     public String toString() {
-        return this.getUsuario() + ": " + this.getTexto();
+        return this.getFecha() + this.getUsuario() + ": " + this.getTexto() + " Likes: " + this.getLikes();
     }
     public void crearMensaje() {
         Scanner sc = new Scanner(System.in);
