@@ -1,4 +1,5 @@
 package Herencia.Network;
+import java.util.ArrayList;
 import java.util.Date;
 
 public abstract class publicacion {
@@ -43,6 +44,11 @@ public abstract class publicacion {
     }
     public void darLike(){
         this.Likes++;
+    }
+    public void comentarios(){
+        ArrayList<String> comentarios = new ArrayList<>();
+        comentarios.add("Flipas con los frikis");
+        comentarios.add("Buena foto broder.");
     }
 }
 
