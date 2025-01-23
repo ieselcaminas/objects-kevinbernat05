@@ -1,4 +1,4 @@
-package Herencia;
+package Herencia.Animales;
 
 public class Gato extends Mamifero {
     Gato(String nombre){

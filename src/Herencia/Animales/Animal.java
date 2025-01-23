@@ -1,7 +1,7 @@
 /**
  * Esta clase da cierta funcionalidad para un Animal que tiene un nombre y sabe hacer ciertas cosas!
  */
-package Herencia;
+package Herencia.Animales;
 public abstract class Animal
 {
     private String nombre;
