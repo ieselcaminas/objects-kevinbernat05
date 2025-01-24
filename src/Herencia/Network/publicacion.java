@@ -27,16 +27,8 @@ public abstract class publicacion {
         return Likes;
     }
 
-    public void setLikes(int likes) {
-        Likes = likes;
-    }
-
     public Date getFecha() {
         return fecha;
-    }
-
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
     }
 
     public void setID(int ID) {
@@ -45,6 +37,10 @@ public abstract class publicacion {
     public void darLike(){
         this.Likes++;
     }
+    public void disLike(){
+        this.Likes--;
+    }
+
     public void comentarios(){
         ArrayList<String> comentarios = new ArrayList<>();
         comentarios.add("Flipas con los frikis");

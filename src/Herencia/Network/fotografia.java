@@ -28,6 +28,7 @@ public class fotografia extends publicacion {
     }
     @Override
     public String toString() {
-        return this.getUsuario() + ": " + this.getFotografia() + ": " + this.getTitulo();
+        return this.getFecha() + " - " + this.getID()+ " - " + this.getUsuario()
+                + " ha subido: "+ this.getTitulo()+ " - Archivo: "+ this.getFotografia();
     }
 }
