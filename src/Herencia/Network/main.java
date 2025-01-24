@@ -5,30 +5,34 @@ import java.util.List;
 
 public class main {
     public static void main(String[] args) {
-        List<publicacion> listadepublicaciones = new ArrayList<>();
+        List<Publicacion> listadepublicaciones = new ArrayList<>();
 
-        mensaje mensaje = new mensaje("Kevin","Hola me llamo Kevin", 1);
+        Usuario kevin = new Usuario("Kevin", 2);
+        Mensaje mensaje = new Mensaje(kevin,"Hola me llamo Kevin", 1);
         mensaje.darLike();
         listadepublicaciones.add(mensaje);
-        mensaje mensaje1 = new mensaje("Kevin", "Hoy es viernes", 1);
+
+        Mensaje mensaje1 = new Mensaje(kevin, "Hoy es viernes", 1);
         mensaje1.darLike();
         mensaje1.darLike();
         mensaje1.darLike();
         mensaje1.disLike();
         listadepublicaciones.add(mensaje1);
 
-        fotografia fotografia = new fotografia("Paquito", 1, "Foto de un paisaje", "Fotopaisaje.jpg");
+        Usuario paquito = new Usuario("Paquito", 1);
+        Fotografia fotografia = new Fotografia(paquito, 1, "Foto de un paisaje", "Fotopaisaje.jpg");
         fotografia.darLike();
         fotografia.darLike();
         listadepublicaciones.add(fotografia);
 
-        publicacionDe("Kevin", listadepublicaciones);
+        publicacionDe(kevin, listadepublicaciones);
 
 
     }
-    public static void publicacionDe(String usuario, List <publicacion> listadepublicaciones){
+    public static void publicacionDe(Usuario usuario, List <Publicacion> listadepublicaciones){
         listadepublicaciones.stream()
-                .filter(publicacion -> publicacion.getUsuario().equals(usuario))
+                .filter(Publicacion -> Publicacion.getUsuario().getNombre().equals(usuario.getNombre()))
                 .forEach(System.out::println);
+
     }
 }

@@ -2,22 +2,22 @@ package Herencia.Network;
 import java.util.ArrayList;
 import java.util.Date;
 
-public abstract class publicacion {
-    private String usuario;
+public abstract class Publicacion {
+    private Usuario usuario;
     private int ID;
     private Date fecha;
     private int Likes;
 
-    public publicacion(String usuario, int ID) {
+    public Publicacion(Usuario usuario, int ID) {
         this.usuario = usuario;
         this.ID = ID;
         this.fecha = new Date();
         this.Likes = 0;
     }
-    public String getUsuario() {
+    public Usuario getUsuario() {
         return usuario;
     }
-    public void setUsuario(String usuario) {
+    public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
     public int getID() {
@@ -39,12 +39,6 @@ public abstract class publicacion {
     }
     public void disLike(){
         this.Likes--;
-    }
-
-    public void comentarios(){
-        ArrayList<String> comentarios = new ArrayList<>();
-        comentarios.add("Flipas con los frikis");
-        comentarios.add("Buena foto broder.");
     }
 }
 

@@ -1,11 +1,11 @@
 package Herencia.Network;
 
-public class fotografia extends publicacion {
+public class Fotografia extends Publicacion {
     private String titulo;
     private String fotografia;
-    public fotografia(String usuario,int ID) {super(usuario,ID);}
+    public Fotografia(Usuario usuario, int ID) {super(usuario,ID);}
 
-    public fotografia(String usuario ,int ID, String titulo, String fotografia) {
+    public Fotografia(Usuario usuario,int ID, String titulo, String fotografia) {
         super(usuario,ID);
         this.titulo = titulo;
         this.fotografia = fotografia;
