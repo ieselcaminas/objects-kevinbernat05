@@ -6,6 +6,7 @@ import java.util.List;
 public class main {
     public static void main(String[] args) {
         List<Publicacion> listadepublicaciones = new ArrayList<>();
+        List<Comentario> comentarios = new ArrayList<>();
 
         Usuario kevin = new Usuario("Kevin", 2);
         Mensaje mensaje = new Mensaje(kevin,"Hola me llamo Kevin", 1);
@@ -25,7 +26,11 @@ public class main {
         fotografia.darLike();
         listadepublicaciones.add(fotografia);
 
-        publicacionDe(kevin, listadepublicaciones);
+        Comentario c = new Comentario("Buenas noches", kevin, mensaje);
+
+        System.out.println(c);
+
+
 
 
     }
@@ -33,6 +38,5 @@ public class main {
         listadepublicaciones.stream()
                 .filter(Publicacion -> Publicacion.getUsuario().getNombre().equals(usuario.getNombre()))
                 .forEach(System.out::println);
-
     }
 }
