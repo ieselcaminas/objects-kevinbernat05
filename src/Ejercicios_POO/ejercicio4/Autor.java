@@ -29,6 +29,6 @@ public class Autor {
 
     @Override
     public String toString() {
-        return "Autor: " + this.nombre + " - " + "Fecha: " + this.fechaNacimiento;
+        return this.nombre + this.fechaNacimiento;
     }
 }

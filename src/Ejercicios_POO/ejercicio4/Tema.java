@@ -1,22 +1,22 @@
 package Ejercicios_POO.ejercicio4;
 
 public class Tema {
-    private String nombre_tema;
+    private String nombre;
 
-    public Tema(String nombre_tema) {
-        this.nombre_tema = nombre_tema;
+    public Tema(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getNombre_tema() {
-        return nombre_tema;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombre_tema(String nombre_tema) {
-        this.nombre_tema = nombre_tema;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     @Override
     public String toString() {
-        return "Tema: " + this.nombre_tema;
+        return this.nombre;
     }
 }

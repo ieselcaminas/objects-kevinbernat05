@@ -39,15 +39,12 @@ public class Cuenta {
     }
 
     public void ingresar(double cantidad) {
-        if (cantidad < 0) {
-        } else {
+        if (cantidad > 0) {
             this.cantidad += cantidad;
         }
     }
     public void retirar(double cantidad) {
-        if (this.cantidad - cantidad < 0) {
-            this.cantidad = 0;
-        } else {
+        if (this.cantidad - cantidad > 0) {
             this.cantidad -= cantidad;
         }
     }
