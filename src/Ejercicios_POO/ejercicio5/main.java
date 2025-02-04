@@ -6,19 +6,21 @@ import java.util.List;
 public class main {
     public static void main(String[] args) {
         List<Banco> bancos = new ArrayList<Banco>();
-
         Banco bbva = new Banco("BBVA",1);
         bancos.add(bbva);
+
             Sucursal a = new Sucursal(1,"Castellon", bbva);
             Sucursal b = new Sucursal(2,"Valencia", bbva);
                 Cliente kevin = new Cliente("Kevin", "13124A");
                     CuentaCorriente cKevin = new CuentaCorriente(123);
+                    Domiciliacion domiciliacion = new Domiciliacion(1, "Agua", cKevin);
                     Prestamo pKevin = new Prestamo(1, 100, kevin);
 
         bbva.addSucursal(a);
         bbva.addSucursal(b);
         a.addCuentas(cKevin);
         cKevin.addClientes(kevin);
+        cKevin.addDomiciliacion(domiciliacion);
         kevin.addCuenta(cKevin);
         kevin.addPrestamo(pKevin);
 
