@@ -34,6 +34,8 @@ public class main {
         Kevin.addExemplar(primero);
         primero.addLectores(Kevin);
 
+        Historic historico = new Historic("05-01", "10-05", primero, Kevin);
+
         for (Editorial editorial : editorials) {
             System.out.println(editorial.getNombre());
 
